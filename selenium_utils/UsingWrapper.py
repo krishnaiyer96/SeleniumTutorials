@@ -3,10 +3,12 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium_utils.handy_wrappers import HandyWrappers
+from selenium_utils.handy_wrappers import  HandyWrappers
+
 
 class UsingWrappers:
-    def test(self):
+    @staticmethod
+    def test():
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         url = "https://www.letskodeit.com/home"
         driver.maximize_window()
@@ -25,3 +27,8 @@ class UsingWrappers:
         login_button.click()
         time.sleep(2)
         driver.quit()
+
+if __name__ == '__main__':
+    UsingWrappers.test()
+
+

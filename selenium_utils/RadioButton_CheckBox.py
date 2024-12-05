@@ -6,6 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 class radio_checkbox_test:
+    @staticmethod
     def select_radio_btn_checkbox():
         url = "https://www.letskodeit.com/practice"
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
